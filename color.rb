@@ -12,4 +12,17 @@ class Sketchup::Color
             (color >> 24) & 255,
         ]
     end
+    
+    def dup
+        # Correctly implement #dup.
+        #
+        # I've been burned several times where I'd forgotten / didn't know that
+        # #dup and #clone returned `nil` for this class and passed the result
+        # to `view.draw` commands which in turn crashed SketchUp.
+        self.new(to_a)
+    end
+    
+    def clone
+        # Correctly implement #clone.
+    end
 end
