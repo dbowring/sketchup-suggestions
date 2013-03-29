@@ -5,7 +5,11 @@ class Sketchup::Materials
         raise NotImplementedException.new('This feature is not implemented')
     end
 
-    def erase_members!(definition_or_array_of_materials)
+    def remove(definition_or_array_of_materials)
+        # Already exist - but only removes one material at the time - and
+        # have a severe bug where the material is only removed from the list
+        # of materials - not from the entities using it.
+        #
         # Bulk erase method. This should (if possible) be more efficient than
         # arr.each() {|d| e.erase! } (and take only one operation)
         definition_or_array_of_materials.each() {|d| d.erase! }
@@ -13,6 +17,19 @@ class Sketchup::Materials
 end
 
 class Sketchup::Material
+    def colorized?
+        # Returns the colorised property of the material.
+    end
+    
+    def colorized=(boolean)
+        # Sets the colorized property of the material.
+        # Perhaps this should be #colorize(color_value)
+    end
+    
+    def reset_color
+        # Resets the colorization of he material texture back to default.
+    end
+    
     def save_skm(path_or_file_like_object)
         # Not currently (easily) possible
         # alternative names: save, save_file
