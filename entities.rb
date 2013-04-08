@@ -47,9 +47,8 @@ class Sketchup::Entities
     end
 
     def section_planes()
-        # Not currently possible with the API
-        # return self.find_all() {|e|
-        #     e.class == Sketchup::SectionPlane
-        # }
+        return self.find_all() {|e|
+            e.class == Sketchup::SectionPlane
+        }
     end
 end
