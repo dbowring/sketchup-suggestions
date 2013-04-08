@@ -12,3 +12,44 @@ def Sketchup.erase_entities(entities)
     return unless entities && entities[0]
     entities[0].model.erase_entities(entities)
 end
+
+
+class Sketchup::Entities
+    def edges()
+        return self.find_all() {|e|
+            e.class == Sketchup::Edge
+        }
+    end
+
+    def faces()
+        return self.find_all() {|e|
+            e.class == Sketchup::Face
+        }
+    end
+
+    def groups()
+        return self.find_all() {|e|
+            e.class == Sketchup::Group
+        }
+    end
+
+    def component_instances()
+        return self.find_all() {|e|
+            e.class == Sketchup::ComponentInstance
+        }
+    end
+
+    def images()
+        return self.find_all() {|e|
+            # Note
+            e.class == Sketchup::Image
+        }
+    end
+
+    def section_planes()
+        # Not currently possible with the API
+        # return self.find_all() {|e|
+        #     e.class == Sketchup::SectionPlane
+        # }
+    end
+end
