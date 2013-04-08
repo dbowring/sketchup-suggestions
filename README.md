@@ -35,3 +35,7 @@ This is just as much organisation for me as it is getting this information
 out. I've kept it somewhat organized and well described, but there's still a
 lot of work to be done. Also, if I never do anything nothing will get done, so
 here's me doing something.
+
+## Recommended Reading
+
+- [Suggestions / Notes Document](https://docs.google.com/document/d/1hwEivitbEwU-Lbnkia9K0HOEKlXkYrV3uVPcqeZZofw/edit#) by @thomthom
