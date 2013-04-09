@@ -5,6 +5,6 @@ module UI
             initial = Sketchup.find_support_file('')
         end
         # Show UI element to select folder
-        raise NotImplemented()
+        raise NotImplementedError
     end
 end
