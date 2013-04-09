@@ -39,3 +39,6 @@ here's me doing something.
 ## Recommended Reading
 
 - [Suggestions / Notes Document](https://docs.google.com/document/d/1hwEivitbEwU-Lbnkia9K0HOEKlXkYrV3uVPcqeZZofw/edit#) by @thomthom
+- [State of Observers](http://www.thomthom.net/software/sketchup/observers/) by @thomthom
+- [WebDialogs - The Lost Manual](https://github.com/thomthom/sketchup-webdialogs-the-lost-manual) by @thomthom
+- [Operation Blockform Methods](http://sketchucation.com/forums/viewtopic.php?f=180&t=46886) by @dbowring, [Dan Rathbun](http://sketchucation.com/forums/memberlist.php?mode=viewprofile&u=29218)
