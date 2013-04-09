@@ -15,40 +15,30 @@ end
 
 
 class Sketchup::Entities
-    def edges()
-        return self.find_all() {|e|
-            e.class == Sketchup::Edge
-        }
+    def edges(&block)
+        # Block can (optionally) be given and passed to the grep function,
+        # which will then behave like map. i,e.,
+        # entities.edges() {|edge| edge.length} #  -> array of all edge lengths
+        return self.grep(Sketchup::Edge, &block)
     end
 
-    def faces()
-        return self.find_all() {|e|
-            e.class == Sketchup::Face
-        }
+    def faces(&block)
+        return self.grep(Sketchup::Face, &block)
     end
 
-    def groups()
-        return self.find_all() {|e|
-            e.class == Sketchup::Group
-        }
+    def groups(&block)
+        return self.grep(Sketchup::Group, &block)
     end
 
-    def component_instances()
-        return self.find_all() {|e|
-            e.class == Sketchup::ComponentInstance
-        }
+    def component_instances(&block)
+        return self.grep(Sketchup::ComponentInstance, &block)
     end
 
-    def images()
-        return self.find_all() {|e|
-            # Note
-            e.class == Sketchup::Image
-        }
+    def images(&block)
+        return self.grep(Sketchup::Image, &block)
     end
 
-    def section_planes()
-        return self.find_all() {|e|
-            e.class == Sketchup::SectionPlane
-        }
+    def section_planes(&block)
+        return self.grep(Sketchup::SectionPlane, &block)
     end
 end
